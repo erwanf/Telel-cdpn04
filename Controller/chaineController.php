@@ -30,11 +30,9 @@ class ChaineController {
 
     public function insertAction(){
         $chaineDTO = new ChaineDTO();
- //       var_dump($_POST);die;
         $chaineDTO->hydrate($_POST);
         $this->chaineDAO->insert($chaineDTO);
-        $this->allChaineAction();
- //       header('Location: index.php?controller=chaine&action=allChaine');
+        header("Location: index.php?controller=chaine&action=allChaine");
     }
 
 
