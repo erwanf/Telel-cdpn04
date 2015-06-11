@@ -23,7 +23,7 @@ class View {
                 extract($data);
                 ob_start();
                 require($view);
-                ob_get_clean();
+                return ob_get_clean();
             }
         }
         else{
@@ -36,7 +36,6 @@ class View {
 
     public function create($data){
         $content = $this->generateFile($this->folder,$data);
-        echo"plopp";
         $viewFinish = $this->generateFile('./View/layout.php', array('content'=>$content));
         return $viewFinish;
     }

@@ -16,6 +16,7 @@ class DefaultController {
     public function indexAction(){
         $view = new View("default", "default");
         echo $view->create(array('default'=>null));
+
     }
 
 }
