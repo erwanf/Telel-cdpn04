@@ -26,7 +26,19 @@ class Connexion {
             $pw,
             array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION)
         );
+        return $this->bdd;
     }
 
+
+    public function executeRequest($sql,$param=null){
+        if ($param==null){
+            $result = $this->getBdd()->query($sql);
+        }
+        else{
+            $result=$this->getBdd()->prepare($sql);
+            $result->execute($param);
+        }
+        return $result;
+    }
 
 }
