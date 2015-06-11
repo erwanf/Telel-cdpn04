@@ -10,7 +10,7 @@
         <a href="index.php">Mon programme TV de la mort qui tue</a>
     </h1>
     <nav>
-        <a href="#">Chaines</a>
+        <a href="index.php?controller=chaine&action=allChaine">Chaines</a>
         <a href="#">Rien</rien></a>
         <a href="#">Pas grand Chose</a>
     </nav>

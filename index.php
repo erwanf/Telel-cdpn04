@@ -7,8 +7,11 @@
  */
 
 require_once("autoload.php");
+define('_CONTROLLER_PATH_',__DIR__.DIRECTORY_SEPARATOR.'Controller'.DIRECTORY_SEPARATOR);
 
 use Controller\Router;
 
 $router = new Router();
 $router->routerRequest();
+
+
